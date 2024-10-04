@@ -3,7 +3,6 @@ package kr.cosine.menu.command
 import kr.cosine.menu.config.SettingConfig
 import kr.cosine.menu.data.Menu
 import kr.cosine.menu.service.MenuViewService
-import kr.cosine.menu.view.MenuView
 import kr.hqservice.framework.command.ArgumentLabel
 import kr.hqservice.framework.command.Command
 import kr.hqservice.framework.command.CommandExecutor

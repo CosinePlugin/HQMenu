@@ -14,7 +14,7 @@ data class Button(
     private val customModelData: Int,
     private val sound: Sound? = null,
     private val isCloseInventoryIfClicked: Boolean,
-    private val commands: List<String>
+    private val commands: List<Command>
 ) {
     fun toItemStack(player: Player): ItemStack {
         return ItemStack(material).editMeta {
@@ -40,10 +40,8 @@ data class Button(
     }
 
     fun executeCommands(player: Player) {
-        val server = player.server
         commands.forEach { command ->
-            val finalCommand = command.replace("%player%", player.name)
-            server.dispatchCommand(server.consoleSender, finalCommand)
+            command.execute(player)
         }
     }
 

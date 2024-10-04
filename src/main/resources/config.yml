@@ -29,7 +29,9 @@ menu:
         # 클릭 시 화면을 닫을건지
         close-inventory-if-clicked: true
 
-        # 명령어는 콘솔 권한으로 실행됩니다.
+        # 유저 권한 또는 콘솔 권한으로 명령어를 실행할 수 있습니다.
+        # 콘솔 권한 ex) "CONSOLE:메뉴관리 열기 예시2 %player%"
+        # 유저 권한 ex) "PLAYER:스텟"
         # %player% = 유저
         commands:
-          - "메뉴관리 열기 예시2 %player%"
+          - "CONSOLE:메뉴관리 열기 예시2 %player%"
