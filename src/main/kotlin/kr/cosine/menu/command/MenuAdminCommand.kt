@@ -1,8 +1,8 @@
-package kr.cosine.mczone.menu.command
+package kr.cosine.menu.command
 
-import kr.cosine.mczone.menu.config.SettingConfig
-import kr.cosine.mczone.menu.data.Menu
-import kr.cosine.mczone.menu.service.MenuViewService
+import kr.cosine.menu.config.SettingConfig
+import kr.cosine.menu.data.Menu
+import kr.cosine.menu.service.MenuViewService
 import kr.hqservice.framework.command.ArgumentLabel
 import kr.hqservice.framework.command.Command
 import kr.hqservice.framework.command.CommandExecutor

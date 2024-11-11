@@ -1,6 +1,6 @@
-package kr.cosine.mczone.menu.registry
+package kr.cosine.menu.registry
 
-import kr.cosine.mczone.menu.data.Menu
+import kr.cosine.menu.data.Menu
 import kr.hqservice.framework.global.core.component.Bean
 
 @Bean

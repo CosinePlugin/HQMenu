@@ -1,4 +1,4 @@
-package kr.cosine.mczone.menu.data
+package kr.cosine.menu.data
 
 import kr.hqservice.framework.bukkit.core.extension.editMeta
 import me.clip.placeholderapi.PlaceholderAPI

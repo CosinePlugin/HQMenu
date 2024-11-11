@@ -5,6 +5,9 @@ menu:
   예시:
     title: "워프"
     size: 54
+
+    # font 파일
+    font: ""
     # negative space font를 사용할 때 쓸 수 있는 옵션
     backspaces: 0
 

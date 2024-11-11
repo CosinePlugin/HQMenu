@@ -1,6 +1,6 @@
-package kr.cosine.mczone.menu.config.module
+package kr.cosine.menu.config.module
 
-import kr.cosine.mczone.menu.config.SettingConfig
+import kr.cosine.menu.config.SettingConfig
 import kr.hqservice.framework.bukkit.core.component.module.Module
 import kr.hqservice.framework.bukkit.core.component.module.Setup
 
