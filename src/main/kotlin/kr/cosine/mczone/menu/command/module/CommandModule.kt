@@ -1,6 +1,6 @@
-package kr.cosine.menu.command.module
+package kr.cosine.mczone.menu.command.module
 
-import kr.cosine.menu.command.MenuUserCommand
+import kr.cosine.mczone.menu.command.MenuUserCommand
 import kr.hqservice.framework.bukkit.core.HQBukkitPlugin
 import kr.hqservice.framework.bukkit.core.component.module.Module
 import kr.hqservice.framework.bukkit.core.component.module.Setup

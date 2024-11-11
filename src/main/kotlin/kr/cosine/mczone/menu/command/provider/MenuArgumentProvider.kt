@@ -1,7 +1,7 @@
-package kr.cosine.menu.command.provider
+package kr.cosine.mczone.menu.command.provider
 
-import kr.cosine.menu.data.Menu
-import kr.cosine.menu.registry.MenuRegistry
+import kr.cosine.mczone.menu.data.Menu
+import kr.cosine.mczone.menu.registry.MenuRegistry
 import kr.hqservice.framework.command.CommandArgumentProvider
 import kr.hqservice.framework.command.CommandContext
 import kr.hqservice.framework.command.argument.exception.ArgumentFeedback

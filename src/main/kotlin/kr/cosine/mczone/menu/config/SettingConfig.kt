@@ -1,11 +1,10 @@
-package kr.cosine.menu.config
+package kr.cosine.mczone.menu.config
 
-import kr.cosine.menu.data.Button
-import kr.cosine.menu.data.Command
-import kr.cosine.menu.data.Menu
-import kr.cosine.menu.data.Sound
-import kr.cosine.menu.enums.Permission
-import kr.cosine.menu.registry.MenuRegistry
+import kr.cosine.mczone.menu.data.Button
+import kr.cosine.mczone.menu.data.Command
+import kr.cosine.mczone.menu.data.Menu
+import kr.cosine.mczone.menu.data.Sound
+import kr.cosine.mczone.menu.registry.MenuRegistry
 import kr.hqservice.framework.bukkit.core.extension.colorize
 import kr.hqservice.framework.global.core.component.Bean
 import kr.hqservice.framework.yaml.config.HQYamlConfiguration
@@ -28,10 +27,7 @@ class SettingConfig(
                 getSection(menuName)?.apply {
                     val title = getString("title").colorize()
                     val size = getInt("size")
-
-                    val font = getString("font")
                     val backspaces = getInt("backspaces")
-
                     val buttons = mutableListOf<Button>()
                     getSection("button")?.apply {
                         getKeys().forEach buttonForEach@ { key ->
@@ -45,7 +41,7 @@ class SettingConfig(
                                 val isCloseInventoryIfClicked = getBoolean("close-inventory-if-clicked")
                                 val commands = getStringList("commands").mapNotNull {
                                     val split = it.split(":", limit = 2)
-                                    val permission = Permission.of(split[0]) ?: return@mapNotNull null
+                                    val permission = kr.cosine.mczone.menu.enums.Permission.of(split[0]) ?: return@mapNotNull null
                                     Command(permission, split[1])
                                 }
                                 val button = Button(slots, material, displayName, lore, customModelData, sound, isCloseInventoryIfClicked, commands)
@@ -53,7 +49,7 @@ class SettingConfig(
                             }
                         }
                     }
-                    val menu = Menu(title, size, font, backspaces, buttons)
+                    val menu = Menu(title, size, backspaces, buttons)
                     menuMap[menuName] = menu
                 }
             }

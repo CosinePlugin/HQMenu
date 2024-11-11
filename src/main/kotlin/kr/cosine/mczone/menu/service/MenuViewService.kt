@@ -1,14 +1,16 @@
-package kr.cosine.menu.service
+package kr.cosine.mczone.menu.service
 
-import kr.cosine.menu.config.SettingConfig
-import kr.cosine.menu.data.Menu
-import kr.cosine.menu.registry.MenuRegistry
-import kr.cosine.menu.view.MenuView
+import kr.cosine.mczone.menu.config.SettingConfig
+import kr.cosine.mczone.menu.data.Menu
+import kr.cosine.mczone.menu.registry.MenuRegistry
+import kr.cosine.mczone.menu.view.MenuView
+import kr.hqservice.framework.bukkit.core.HQBukkitPlugin
 import kr.hqservice.framework.global.core.component.Service
 import org.bukkit.entity.Player
 
 @Service
 class MenuViewService(
+    private val plugin: HQBukkitPlugin,
     private val settingConfig: SettingConfig,
     private val menuRegistry: MenuRegistry
 ) {
@@ -21,6 +23,6 @@ class MenuViewService(
     }
 
     fun openMenuView(player: Player, menu: Menu) {
-        MenuView(menu, player).open(player)
+        MenuView(plugin, menu, player).open(player)
     }
 }

@@ -1,4 +1,4 @@
-package kr.cosine.menu.data
+package kr.cosine.mczone.menu.data
 
 import org.bukkit.entity.Player
 
