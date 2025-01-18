@@ -3,9 +3,9 @@ package kr.cosine.menu.data
 import org.bukkit.entity.Player
 
 data class Sound(
-    private val name: String,
-    private val volume: Float,
-    private val pitch: Float
+    val name: String,
+    val volume: Float,
+    val pitch: Float
 ) : Action {
     override suspend fun action(player: Player) {
         playSound(player)

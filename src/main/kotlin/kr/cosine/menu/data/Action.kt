@@ -18,8 +18,11 @@ interface Action {
 
                 "SOUND" -> {
                     val sound = line.substringAfter(":")
-                    val name = sound.substringBefore(":")
-                    val volume = sound.substringAfter(":").substringBefore(":").toFloat()
+                    val namespace = sound.substringBefore(":")
+                    val key = sound.substringAfter(":").substringBefore(":")
+                    val name = "$namespace:$key"
+
+                    val volume = sound.substringAfter(":").substringAfter(":").substringBefore(":").toFloat()
                     val pitch = sound.substringAfterLast(":").toFloat()
                     return Sound(name, volume, pitch)
                 }
