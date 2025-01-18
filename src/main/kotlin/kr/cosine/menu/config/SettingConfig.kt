@@ -1,10 +1,6 @@
 package kr.cosine.menu.config
 
-import kr.cosine.menu.data.Button
-import kr.cosine.menu.data.Command
-import kr.cosine.menu.data.Menu
-import kr.cosine.menu.data.Sound
-import kr.cosine.menu.enums.Permission
+import kr.cosine.menu.data.*
 import kr.cosine.menu.registry.MenuRegistry
 import kr.hqservice.framework.bukkit.core.extension.colorize
 import kr.hqservice.framework.global.core.component.Bean
@@ -43,12 +39,8 @@ class SettingConfig(
                                 val customModelData = getInt("custom-model-data")
                                 val sound = findSound("sound")
                                 val isCloseInventoryIfClicked = getBoolean("close-inventory-if-clicked")
-                                val commands = getStringList("commands").mapNotNull {
-                                    val split = it.split(":", limit = 2)
-                                    val permission = Permission.of(split[0]) ?: return@mapNotNull null
-                                    Command(permission, split[1])
-                                }
-                                val button = Button(slots, material, displayName, lore, customModelData, sound, isCloseInventoryIfClicked, commands)
+                                val actions = getStringList("commands").mapNotNull(Action::of)
+                                val button = Button(slots, material, displayName, lore, customModelData, sound, isCloseInventoryIfClicked, actions)
                                 buttons.add(button)
                             }
                         }

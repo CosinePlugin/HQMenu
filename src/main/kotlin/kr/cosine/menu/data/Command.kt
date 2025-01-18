@@ -6,9 +6,8 @@ import org.bukkit.entity.Player
 class Command(
     private val permission: Permission,
     private val command: String
-) {
-
-    fun execute(player: Player) {
+) : Action {
+    override suspend fun action(player: Player) {
         val finalCommand = command.replace("%player%", player.name)
         if (permission == Permission.CONSOLE) {
             val server = player.server

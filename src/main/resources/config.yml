@@ -32,6 +32,8 @@ menu:
         # 유저 권한 또는 콘솔 권한으로 명령어를 실행할 수 있습니다.
         # 유저 권한 ex) "PLAYER:스텟"
         # 콘솔 권한 ex) "CONSOLE:메뉴관리 열기 예시2 %player%"
+        # 딜레이 ex) "DELAY:2"
+        # 사운드 ex) "SOUND:minecraft:ui.button.click:1:1"
         # %player% = 유저
         commands:
           - "CONSOLE:메뉴관리 열기 예시2 %player%"
